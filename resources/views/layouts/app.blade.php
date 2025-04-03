@@ -54,10 +54,10 @@
                         </li>
 
                         <li>
-                            <a class="nav-link" href="{{ route('psychol') }}">{{ __('Agenda+') }}</a>
+                            <a class="nav-link" href="{{ route('agenda') }}">{{ __('Agenda') }}</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ route('psychol') }}">{{ __('Consultas') }}</a>
+                            <a class="nav-link" href="{{ route('consultation') }}">{{ __('Consultas') }}</a>
                         </li>
                         <!-- <li>
                             <a class="nav-link" href="{{ route('psychol') }}">{{ __('Notícias') }}</a>

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('notificacoes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->text('message')->nullable();
+            $table->enum('type', ['info', 'confirm'])->default('info');
+            $table->enum('status', ['enviada', 'lida', 'nao_lida'])->default('enviada');
+            $table->date('data_envio')->nullable();
             $table->timestamps();
         });
     }

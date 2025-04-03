@@ -11,16 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pagamentos', function (Blueprint $table) {
+        Schema::create('medicals_records', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('consulta_id')->constrained('consultas')->onDelete('cascade');
             $table->foreignId('paciente_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('especialidade_id')->constrained('especialidades')->onDelete('cascade');
             $table->foreignId('profissional_id')->constrained('users')->onDelete('cascade');
-            $table->decimal('valor', 10, 2);
-            $table->string('metodo_pagamento');
-            $table->string('status')->default('pendente');
+            $table->foreignId('consulta_id')->constrained('consultas')->onDelete('cascade');
+            $table->string('diagnostico')->nullable();
+            $table->text('observacoes')->nullable();
+            $table->text('prescricao')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pagamentos');
+        Schema::dropIfExists('medicals_records');
     }
 };
