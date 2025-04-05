@@ -19,7 +19,7 @@ class ProfissionaisFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
+            // 'email_verified_at' => now(),
             'specialty' => fake()->word(),
             'crm' => fake()->unique()->word(),
             'address' => fake()->address(),

@@ -15,9 +15,17 @@ class Profissionais extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'name',
+        'nome',
         'email',
+        'phone',
+        'specialty',
         'crm',
         'address',
+        'opening_hours_start',
+        'opening_hours_end',
+        'weekday',
+        // Adicione outros campos conforme necessário
     ];
 }
+
+// id 	name 	email 	phone 	specialty 	crm 	address 	opening_hours_start 	opening_hours_end 	Weekday
