@@ -25,7 +25,7 @@ class ProfissionaisFactory extends Factory
             'address' => fake()->address(),
             'opening_hours_start' => fake()->dateTimeBetween('-1 year', '+1 year'),
             'opening_hours_end' => fake()->dateTimeBetween('-1 year', '+1 year'),
-            'Weekday' => fake()->randomElement(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']),
+            'weekday' => fake()->randomElement(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']),
         ];
     }
 }
